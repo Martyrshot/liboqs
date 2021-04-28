@@ -1,0 +1,69 @@
+name: FrodoKEM
+type: kem
+principal-submitters:
+  - Michael Naehrig
+  - Erdem Alkim
+  - Joppe Bos
+  - Léo Ducas
+  - Karen Easterbrook
+  - Brian LaMacchia
+  - Patrick Longa
+  - Ilya Mironov
+  - Valeria Nikolaenko
+  - Christopher Peikert
+  - Ananth Raghunathan
+  - Douglas Stebila
+auxiliary-submitters: []
+crypto-assumption: learning with errors (LWE)
+website: https://frodokem.org/
+nist-round: 3
+spec-version: NIST Round 3 submission
+spdx-license-identifier: MIT
+implementation-chain:
+  - SAMPLE_URL_LEAF
+  - SAMPLE_URL_INT
+  - https://github.com/microsoft/PQCrypto-LWEKE/commit/669522db63850fa64d1a24a47e138e80a59349db
+implementation-type: optimized
+parameter-sets:
+  -
+    name: FrodoKEM-640-AES
+    claimed-nist-level: 1
+    claimed-security: IND-CCA2
+    length-public-key: 9616
+    length-ciphertext: 9720
+    length-secret-key: 19888
+    length-shared-secret: 16
+    implementations:
+      -
+        arch: x86-64
+        portable: yes
+        platforms: [Linux, macOS, Windows]
+        cpu-extensions-used: [AVX2, AESNI]
+        common-crypto:
+          - AES: liboqs
+          - SHA2: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+      -
+        arch: armel
+        portable: no
+        cpu-extensions-used: []
+        platforms: [Linux, macOS, Windows]
+        common-crypto:
+          - AES: liboqs
+          - SHA2: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+      -
+        arch: armhf
+        portable: yes
+        platforms: [Linux]
+        cpu-extensions-used: []
+        common-crypto:
+          - AES: liboqs
+          - SHA2: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
