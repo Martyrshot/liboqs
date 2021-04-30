@@ -41,7 +41,7 @@ parameter-sets:
         cpu-extensions-used: [AVX2, AESNI]
         common-crypto:
           - AES: liboqs
-          - SHA2: liboqs
+          - SHA3: liboqs
         no-secret-dependent-branching-claimed: true
         no-secret-dependent-branching-checked-by-valgrind: true
         large-stack-usage: false
@@ -52,7 +52,7 @@ parameter-sets:
         platforms: [Linux, macOS, Windows]
         common-crypto:
           - AES: liboqs
-          - SHA2: liboqs
+          - SHA3: liboqs
         no-secret-dependent-branching-claimed: true
         no-secret-dependent-branching-checked-by-valgrind: true
         large-stack-usage: false
@@ -63,7 +63,7 @@ parameter-sets:
         cpu-extensions-used: []
         common-crypto:
           - AES: liboqs
-          - SHA2: liboqs
+          - SHA3: liboqs
         no-secret-dependent-branching-claimed: true
         no-secret-dependent-branching-checked-by-valgrind: true
         large-stack-usage: false
