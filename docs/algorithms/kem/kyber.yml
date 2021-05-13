@@ -1,0 +1,204 @@
+name: Kyber
+type: kem
+principal-submitters:
+  - Peter Schwabe
+auxiliary-submitters:
+  - Roberto Avanzi
+  - Joppe Bos
+  - Léo Ducas
+  - Eike Kiltz
+  - Tancrède Lepoint
+  - Vadim Lyubashevsky
+  - John M. Schanck
+  - Gregor Seiler
+  - Damien Stehlé
+crypto-assumption: Module LWE+R with base ring Z[x]/(3329, x^256+1)
+website: https://pq-crystals.org/
+nist-round: 3
+spec-version: NIST Round 3 submission
+spdx-license-identifier: Public domain
+implementation-chain:
+  - https://github.com/pq-crystals/kyber/commit/8e9308bd
+  - copy_from_upstream patches
+implementation-type: optimized
+parameter-sets:
+  -
+    name: Kyber512
+    claimed-nist-level: 1
+    claimed-security: IND-CCA2
+    length-public-key: 800
+    length-ciphertext: 768
+    length-secret-key: 1632
+    length-shared-secret: 32
+    implementations:
+      -
+        arch: x86-64
+        portable: no
+        platforms: [Linux, macOS]
+        cpu-extensions-used: [AVX2, BMI2, POPCNT]
+        common-crypto:
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+      -
+        arch: any
+        portable: yes
+        platforms: any
+        cpu-extensions-used: []
+        common-crypto:
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+  -
+    name: Kyber512-90s
+    claimed-nist-level: 1
+    claimed-security: IND-CCA2
+    length-public-key: 800
+    length-ciphertext: 768
+    length-secret-key: 1632
+    length-shared-secret: 32
+    implementations:
+      -
+        arch: x86-64
+        portable: no
+        platforms: [Linux, macOS]
+        cpu-extensions-used: [AES, AVX2, BMI2, POPCNT]
+        common-crypto:
+          - AES: pqcrystals-kyber_common_aes
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+      -
+        arch: any
+        portable: yes
+        platforms: any
+        cpu-extensions-used: []
+        common-crypto:
+          - AES: pqcrystals-kyber_common_ref
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+  -
+    name: Kyber768
+    claimed-nist-level: 3
+    claimed-security: IND-CCA2
+    length-public-key: 1184
+    length-ciphertext: 1088
+    length-secret-key: 2400
+    length-shared-secret: 32
+    implementations:
+      -
+        arch: x86-64
+        portable: no
+        platforms: [Linux, macOS]
+        cpu-extensions-used: [AVX2, BMI2, POPCNT]
+        common-crypto:
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+      -
+        arch: any
+        portable: yes
+        platforms: any
+        cpu-extensions-used: []
+        common-crypto:
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+  -
+    name: Kyber768-90s
+    claimed-nist-level: 3
+    claimed-security: IND-CCA2
+    length-public-key: 1184
+    length-ciphertext: 1088
+    length-secret-key: 2400
+    length-shared-secret: 32
+    implementations:
+      -
+        arch: x86-64
+        portable: no
+        platforms: [Linux, macOS]
+        cpu-extensions-used: [AES, AVX2, BMI2, POPCNT]
+        common-crypto:
+          - AES: pqcrystals-kyber_common_aes
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+      -
+        arch: any
+        portable: yes
+        platforms: any
+        cpu-extensions-used: []
+        common-crypto:
+          - AES: pqcrystals-kyber_common_ref
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+  -
+    name: Kyber1024
+    claimed-nist-level: 5
+    claimed-security: IND-CCA2
+    length-public-key: 1568
+    length-ciphertext: 1568
+    length-secret-key: 3168
+    length-shared-secret: 32
+    implementations:
+      -
+        arch: x86-64
+        portable: no
+        platforms: [Linux, macOS]
+        cpu-extensions-used: [AVX2, BMI2, POPCNT]
+        common-crypto:
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+      -
+        arch: any
+        portable: yes
+        platforms: any
+        cpu-extensions-used: []
+        common-crypto:
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+  -
+    name: Kyber1024-90s
+    claimed-nist-level: 5
+    claimed-security: IND-CCA2
+    length-public-key: 1568
+    length-ciphertext: 1568
+    length-secret-key: 3168
+    length-shared-secret: 32
+    implementations:
+      -
+        arch: x86-64
+        portable: no
+        platforms: [Linux, macOS]
+        cpu-extensions-used: [AES, AVX2, BMI2, POPCNT]
+        common-crypto:
+          - AES: pqcrystals-kyber_common_aes
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+      -
+        arch: any
+        portable: yes
+        platforms: any
+        cpu-extensions-used: []
+        common-crypto:
+          - AES: pqcrystals-kyber_common_ref
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
