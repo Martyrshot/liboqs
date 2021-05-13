@@ -1,0 +1,142 @@
+name: NTRU
+type: kem
+principal-submitters:
+  - John M. Schanck
+auxiliary-submitters:
+  - Cong Chen
+  - Oussama Danba
+  - Jeffrey Hoffstein
+  - Andreas Hülsing
+  - Joost Rijneveld
+  - Tsunekazu Saito
+  - Peter Schwabe
+  - William Whyte
+  - Keita Xagawa
+  - Takashi Yamakawa
+  - Zhenfei Zhang
+crypto-assumption: NTRU in Z[x]/(q, x^n-1) with prime n and power-of-two q
+website: https://ntru.org/
+nist-round: 3
+spec-version: NIST Round 3 submission
+spdx-license-identifier: Public domain
+implementation-chain:
+  - https://github.com/jschanck/ntru/tree/a43a4457
+  - https://github.com/PQClean/PQClean/tree/ef4ad5da
+implementation-type: optimized
+parameter-sets:
+  -
+    name: ntruhps2048509
+    claimed-nist-level: 1
+    claimed-security: IND-CCA2
+    length-public-key: 699
+    length-ciphertext: 935
+    length-secret-key: 699
+    length-shared-secret: 32
+    implementations:
+      -
+        arch: x86-64
+        portable: no
+        platforms: [Linux, macOS]
+        cpu-extensions-used: [AVX2, BMI2]
+        common-crypto:
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+      -
+        arch: any
+        portable: yes
+        platforms: any
+        cpu-extensions-used: []
+        common-crypto:
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+  -
+    name: ntruhps2048677
+    claimed-nist-level: 3
+    claimed-security: IND-CCA2
+    length-public-key: 930
+    length-ciphertext: 930
+    length-secret-key: 1234
+    length-shared-secret: 32
+    implementations:
+      -
+        arch: x86-64
+        portable: no
+        platforms: [Linux, macOS]
+        cpu-extensions-used: [AVX2, BMI2]
+        common-crypto:
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+      -
+        arch: any
+        portable: yes
+        platforms: any
+        cpu-extensions-used: []
+        common-crypto:
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+  -
+    name: ntruhps4096821
+    claimed-nist-level: 5
+    claimed-security: IND-CCA2
+    length-public-key: 1230
+    length-ciphertext: 1230
+    length-secret-key: 1590
+    length-shared-secret: 32
+    implementations:
+      -
+        arch: x86-64
+        portable: no
+        platforms: [Linux, macOS]
+        cpu-extensions-used: [AVX2, BMI2]
+        common-crypto:
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+      -
+        arch: any
+        portable: yes
+        platforms: any
+        cpu-extensions-used: []
+        common-crypto:
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+  -
+    name: ntruhrss701
+    claimed-nist-level: 3
+    claimed-security: IND-CCA2
+    length-public-key: 1138
+    length-ciphertext: 1138
+    length-secret-key: 1450
+    length-shared-secret: 32
+    implementations:
+      -
+        arch: x86-64
+        portable: no
+        platforms: [Linux, macOS]
+        cpu-extensions-used: [AVX2, BMI2]
+        common-crypto:
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
+      -
+        arch: any
+        portable: yes
+        platforms: any
+        cpu-extensions-used: []
+        common-crypto:
+          - SHA3: liboqs
+        no-secret-dependent-branching-claimed: true
+        no-secret-dependent-branching-checked-by-valgrind: true
+        large-stack-usage: false
