@@ -20,8 +20,6 @@ nist-round: 3
 spec-version: NIST Round 3 submission
 spdx-license-identifier: MIT
 implementation-chain:
-  - SAMPLE_URL_LEAF
-  - SAMPLE_URL_INT
   - https://github.com/microsoft/PQCrypto-LWEKE/commit/669522db63850fa64d1a24a47e138e80a59349db
 implementation-type: optimized
 parameter-sets:

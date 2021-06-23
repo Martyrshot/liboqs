@@ -16,7 +16,7 @@ crypto-assumption: Module LWE+R with base ring Z[x]/(3329, x^256+1)
 website: https://pq-crystals.org/
 nist-round: 3
 spec-version: NIST Round 3 submission
-spdx-license-identifier: Public domain
+spdx-license-identifier: CC0-1.0
 implementation-chain:
   - https://github.com/pq-crystals/kyber/commit/8e9308bd
   - copy_from_upstream patches
