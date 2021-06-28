@@ -22,7 +22,7 @@ spdx-license-identifier: Public domain
 implementation-chain:
 - https://pqc-hqc.org/implementation.html
 - https://github.com/PQClean/PQClean/commit/ef4ad5da02283ec0dd58b57a0684c98a1e33a531
-implementation-type: optimized
+implementation-id: avx2
 parameter-sets:
 - name: HQC-128
   claimed-nist-level: 1
