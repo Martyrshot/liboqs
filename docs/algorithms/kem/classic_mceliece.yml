@@ -18,8 +18,9 @@ crypto-assumption: Niederreiter's dual version of McEliece's public key encrypti
 website: https://classic.mceliece.org
 nist-round: 3
 spec-version: SUPERCOP-20191221
-spdx-license-identifier: Public domain
-upstream: https://github.com/PQClean/PQClean/commit/7eb978b4a733696bd7197278aa84216095674524
+primary-upstream: 
+  source: https://github.com/PQClean/PQClean/commit/7eb978b4a733696bd7197278aa84216095674524
+  spdx-license-identifier: Public domain
 upstream-ancestors:
 - SUPERCOP-20191221 "vec" and "avx" implementations
 parameter-sets:
@@ -32,7 +33,8 @@ parameter-sets:
   length-shared-secret: 32
   implementations-switch-on-runtime-cpu-features: true
   implementations:
-  - upstream-id: vec
+  - upstream: primary-upstream
+    upstream-id: vec
     supported-platforms: all
     common-crypto:
     - AES: liboqs
@@ -40,7 +42,8 @@ parameter-sets:
     no-secret-dependent-branching-claimed: true
     no-secret-dependent-branching-checked-by-valgrind: true
     large-stack-usage: true
-  - upstream-id: avx
+  - upstream: primary-upstream
+    upstream-id: avx
     supported-platforms:
     - architecture: x86_64
       operating_systems:
@@ -64,7 +67,8 @@ parameter-sets:
   length-shared-secret: 32
   implementations-switch-on-runtime-cpu-features: true
   implementations:
-  - upstream-id: vec
+  - upstream: primary-upstream
+    upstream-id: vec
     supported-platforms: all
     common-crypto:
     - AES: liboqs
@@ -72,7 +76,8 @@ parameter-sets:
     no-secret-dependent-branching-claimed: true
     no-secret-dependent-branching-checked-by-valgrind: true
     large-stack-usage: true
-  - upstream-id: avx
+  - upstream: primary-upstream
+    upstream-id: avx
     supported-platforms:
     - architecture: x86_64
       operating_systems:
@@ -97,7 +102,8 @@ parameter-sets:
   length-shared-secret: 32
   implementations-switch-on-runtime-cpu-features: true
   implementations:
-  - upstream-id: vec
+  - upstream: primary-upstream
+    upstream-id: vec
     supported-platforms: all
     common-crypto:
     - AES: liboqs
@@ -105,7 +111,8 @@ parameter-sets:
     no-secret-dependent-branching-claimed: true
     no-secret-dependent-branching-checked-by-valgrind: true
     large-stack-usage: true
-  - upstream-id: avx
+  - upstream: primary-upstream
+    upstream-id: avx
     supported-platforms:
     - architecture: x86_64
       operating_systems:
@@ -129,7 +136,8 @@ parameter-sets:
   length-shared-secret: 32
   implementations-switch-on-runtime-cpu-features: true
   implementations:
-  - upstream-id: vec
+  - upstream: primary-upstream
+    upstream-id: vec
     supported-platforms: all
     common-crypto:
     - AES: liboqs
@@ -137,7 +145,8 @@ parameter-sets:
     no-secret-dependent-branching-claimed: true
     no-secret-dependent-branching-checked-by-valgrind: true
     large-stack-usage: true
-  - upstream-id: avx
+  - upstream: primary-upstream
+    upstream-id: avx
     supported-platforms:
     - architecture: x86_64
       operating_systems:
@@ -162,7 +171,8 @@ parameter-sets:
   length-shared-secret: 32
   implementations-switch-on-runtime-cpu-features: true
   implementations:
-  - upstream-id: vec
+  - upstream: primary-upstream
+    upstream-id: vec
     supported-platforms: all
     common-crypto:
     - AES: liboqs
@@ -170,7 +180,8 @@ parameter-sets:
     no-secret-dependent-branching-claimed: true
     no-secret-dependent-branching-checked-by-valgrind: true
     large-stack-usage: true
-  - upstream-id: avx
+  - upstream: primary-upstream
+    upstream-id: avx
     supported-platforms:
     - architecture: x86_64
       operating_systems:
@@ -194,7 +205,8 @@ parameter-sets:
   length-shared-secret: 32
   implementations-switch-on-runtime-cpu-features: true
   implementations:
-  - upstream-id: vec
+  - upstream: primary-upstream
+    upstream-id: vec
     supported-platforms: all
     common-crypto:
     - AES: liboqs
@@ -202,7 +214,8 @@ parameter-sets:
     no-secret-dependent-branching-claimed: true
     no-secret-dependent-branching-checked-by-valgrind: true
     large-stack-usage: true
-  - upstream-id: avx
+  - upstream: primary-upstream
+    upstream-id: avx
     supported-platforms:
     - architecture: x86_64
       operating_systems:
@@ -227,7 +240,8 @@ parameter-sets:
   length-shared-secret: 32
   implementations-switch-on-runtime-cpu-features: true
   implementations:
-  - upstream-id: vec
+  - upstream: primary-upstream
+    upstream-id: vec
     supported-platforms: all
     common-crypto:
     - AES: liboqs
@@ -235,7 +249,8 @@ parameter-sets:
     no-secret-dependent-branching-claimed: true
     no-secret-dependent-branching-checked-by-valgrind: true
     large-stack-usage: true
-  - upstream-id: avx
+  - upstream: primary-upstream
+    upstream-id: avx
     supported-platforms:
     - architecture: x86_64
       operating_systems:
@@ -259,7 +274,8 @@ parameter-sets:
   length-shared-secret: 32
   implementations-switch-on-runtime-cpu-features: true
   implementations:
-  - upstream-id: vec
+  - upstream: primary-upstream
+    upstream-id: vec
     supported-platforms: all
     common-crypto:
     - AES: liboqs
@@ -267,7 +283,8 @@ parameter-sets:
     no-secret-dependent-branching-claimed: true
     no-secret-dependent-branching-checked-by-valgrind: true
     large-stack-usage: true
-  - upstream-id: avx
+  - upstream: primary-upstream
+    upstream-id: avx
     supported-platforms:
     - architecture: x86_64
       operating_systems:
@@ -292,7 +309,8 @@ parameter-sets:
   length-shared-secret: 32
   implementations-switch-on-runtime-cpu-features: true
   implementations:
-  - upstream-id: vec
+  - upstream: primary-upstream
+    upstream-id: vec
     supported-platforms: all
     common-crypto:
     - AES: liboqs
@@ -300,7 +318,8 @@ parameter-sets:
     no-secret-dependent-branching-claimed: true
     no-secret-dependent-branching-checked-by-valgrind: true
     large-stack-usage: true
-  - upstream-id: avx
+  - upstream: primary-upstream
+    upstream-id: avx
     supported-platforms:
     - architecture: x86_64
       operating_systems:
@@ -324,7 +343,8 @@ parameter-sets:
   length-shared-secret: 32
   implementations-switch-on-runtime-cpu-features: true
   implementations:
-  - upstream-id: vec
+  - upstream: primary-upstream
+    upstream-id: vec
     supported-platforms: all
     common-crypto:
     - AES: liboqs
@@ -332,7 +352,8 @@ parameter-sets:
     no-secret-dependent-branching-claimed: true
     no-secret-dependent-branching-checked-by-valgrind: true
     large-stack-usage: true
-  - upstream-id: avx
+  - upstream: primary-upstream
+    upstream-id: avx
     supported-platforms:
     - architecture: x86_64
       operating_systems:
