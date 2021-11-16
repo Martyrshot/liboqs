@@ -18,7 +18,7 @@ crypto-assumption: Niederreiter's dual version of McEliece's public key encrypti
 website: https://classic.mceliece.org
 nist-round: 3
 spec-version: SUPERCOP-20191221
-primary-upstream: 
+primary-upstream:
   source: https://github.com/PQClean/PQClean/commit/7eb978b4a733696bd7197278aa84216095674524
   spdx-license-identifier: Public domain
 upstream-ancestors:

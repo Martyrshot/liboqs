@@ -18,7 +18,7 @@ crypto-assumption: NTRU in Z[x]/(q, x^n-1) with prime n and power-of-two q
 website: https://ntru.org/
 nist-round: 3
 spec-version: NIST Round 3 submission
-primary-upstream: 
+primary-upstream:
   source: https://github.com/PQClean/PQClean/commit/7eb978b4a733696bd7197278aa84216095674524
   spdx-license-identifier: CC0-1.0
 upstream-ancestors:
